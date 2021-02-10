@@ -2,3 +2,8 @@ applications:
 - name: CookieSurveyApp
   random-route: true
   memory: 128M
+  env:
+    NATURAL_LANGUAGE_UNDERSTANDING_APIKEY: YuJzArBh9LecL6meB-sokd0vIMr_tbGcafh-tCYrkPYe
+    NATURAL_LANGUAGE_UNDERSTANDING_IAM_APIKEY: YuJzArBh9LecL6meB-sokd0vIMr_tbGcafh-tCYrkPYe
+    NATURAL_LANGUAGE_UNDERSTANDING_URL: https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/0f8e24de-377f-4599-b35a-6e9cf95d041f
+    NATURAL_LANGUAGE_UNDERSTANDING_AUTH_TYPE: iam
