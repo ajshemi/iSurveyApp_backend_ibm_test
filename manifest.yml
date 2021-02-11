@@ -2,6 +2,8 @@ applications:
 - name: CookieSurveyApp
   random-route: true
   memory: 128M
+  services:
+    - Databases_for_PostgreSQL-gi
   env:
     NATURAL_LANGUAGE_UNDERSTANDING_APIKEY: YuJzArBh9LecL6meB-sokd0vIMr_tbGcafh-tCYrkPYe
     NATURAL_LANGUAGE_UNDERSTANDING_IAM_APIKEY: YuJzArBh9LecL6meB-sokd0vIMr_tbGcafh-tCYrkPYe
