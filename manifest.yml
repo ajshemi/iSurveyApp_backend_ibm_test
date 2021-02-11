@@ -1,10 +1,14 @@
 applications:
 - name: CookieSurveyApp
-  random-route: true
+  routes: 
+    - route: cookiesurveyapp-brave-quoll-sv.us-south.cf.appdomain.cloud
+  # random-route: true
   memory: 128M
-  command: bin/rails server -b 0.0.0.0 -p $PORT -e $RAILS_ENV
+  # command: bin/rails server -b 0.0.0.0 -p $PORT -e $RAILS_ENV
   services:
     - Databases_for_PostgreSQL-gi
+    - Natural Language Understanding-zw-56189
+
   env:
     NATURAL_LANGUAGE_UNDERSTANDING_APIKEY: YuJzArBh9LecL6meB-sokd0vIMr_tbGcafh-tCYrkPYe
     NATURAL_LANGUAGE_UNDERSTANDING_IAM_APIKEY: YuJzArBh9LecL6meB-sokd0vIMr_tbGcafh-tCYrkPYe
