@@ -6,7 +6,7 @@ applications:
   memory: 128M
   # command: bin/rails server -b 0.0.0.0 -p $PORT -e $RAILS_ENV
   services:
-    - Databases_for_PostgreSQL-gi
+    - psql_ibm_cloud
     - Natural Language Understanding-zw-56189
 
   env:
