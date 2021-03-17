@@ -75,11 +75,20 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
+  # production:
+  #   url: <%= ENV['DATABASE_URL'] %>
+
 production:
   <<: *default
   database: cookieSurveyApp_production
   username: cookieSurveyApp
   password: <%= ENV['COOKIESURVEYAPP_DATABASE_PASSWORD'] %>
+
+
+#ajs
+# development:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: blog_development
+#   pool: 5
+

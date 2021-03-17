@@ -5,7 +5,7 @@ applications:
   # random-route: true
   memory: 128M
   # command: bin/rails db:migrate && bin/rails server -b 0.0.0.0 -p $PORT -e $RAILS_ENV
-  command: bin/rails server -b 0.0.0.0 -p $PORT -e $RAILS_ENV
+  # command: bin/rails server -b 0.0.0.0 -p $PORT -e $RAILS_ENV
   # command: bin/rails server -p $PORT -e $RAILS_ENV
 
 
