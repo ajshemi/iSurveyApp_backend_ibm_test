@@ -15,17 +15,17 @@
 # gem 'pg'
 #
 #//
-default: &default
-  adapter: postgresql
-  encoding: unicode
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 #//
 #//
-development:
-  <<: *default
-  database: cookieSurveyApp_development
+# development:
+#   <<: *default
+#   database: cookieSurveyApp_development
 #//
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,9 +58,9 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 #//
-test:
-  <<: *default
-  database: cookieSurveyApp_test
+# test:
+#   <<: *default
+#   database: cookieSurveyApp_test
 #//  
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -83,11 +83,11 @@ test:
   #   url: <%= ENV['DATABASE_URL'] %>
 
 #//
-production:
-  <<: *default
-  database: cookieSurveyApp_production
-  username: cookieSurveyApp
-  password: <%= ENV['COOKIESURVEYAPP_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: cookieSurveyApp_production
+#   username: cookieSurveyApp
+#   password: <%= ENV['COOKIESURVEYAPP_DATABASE_PASSWORD'] %>
 
 #//
 
@@ -101,25 +101,26 @@ production:
 
 
 
-# default: &default
-#   adapter: postgresql
-#   encoding: unicode
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#   host: <%= ENV['host'] %>
-#   port: 32668
-#   username: <%= ENV['username'] %>
-#   url: <%= ENV['url'] %>
-#   password: <%= ENV['password'] %>
-#   certificate: <%= ENV['certificate'] %>
+default: &default
 
-# development:
-#   <<: *default
-#   database: cookieSurveyApp_deployment
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV['host'] %>
+  port: 32668
+  username: <%= ENV['username'] %>
+  url: <%= ENV['url'] %>
+  password: <%= ENV['password'] %>
+  certificate: <%= ENV['certificate'] %>
 
-# test:
-#   <<: *default
-#   database: cookieSurveyApp_test
+development:
+  <<: *default
+  database: cookieSurveyApp_deployment
 
-# production:
-#   <<: *default
-#   database: cookieSurveyApp_production
+test:
+  <<: *default
+  database: cookieSurveyApp_test
+
+production:
+  <<: *default
+  database: cookieSurveyApp_production

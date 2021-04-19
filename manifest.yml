@@ -1,7 +1,7 @@
 applications:
 - name: CookieSurveyApp
   routes: 
-    - route: cookiesurveyapp-brave-quoll-sv.us-south.cf.appdomain.cloud
+    - route: cookiesurveyapp-ajs.us-south.cf.appdomain.cloud
   # random-route: true
   memory: 128M
   # command: bin/rails db:migrate && bin/rails server -b 0.0.0.0 -p $PORT -e $RAILS_ENV
@@ -13,8 +13,3 @@ applications:
     - psqlforcookieapp
     - ajs-ibm-nlu
 
-  # env:
-  #   NATURAL_LANGUAGE_UNDERSTANDING_APIKEY: YuJzArBh9LecL6meB-sokd0vIMr_tbGcafh-tCYrkPYe
-  #   NATURAL_LANGUAGE_UNDERSTANDING_IAM_APIKEY: YuJzArBh9LecL6meB-sokd0vIMr_tbGcafh-tCYrkPYe
-  #   NATURAL_LANGUAGE_UNDERSTANDING_URL: https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/0f8e24de-377f-4599-b35a-6e9cf95d041f
-  #   NATURAL_LANGUAGE_UNDERSTANDING_AUTH_TYPE: iam
