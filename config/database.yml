@@ -101,26 +101,71 @@
 
 
 
-default: &default
 
+######
+###### setup for connection to ibmcloud postgres database.
+
+# default: &default
+
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   host: <%= ENV['host'] %>
+#   port: 32668
+#   username: <%= ENV['username'] %>
+#   url: <%= ENV['url'] %>
+#   password: <%= ENV['password'] %>
+#   certificate: <%= ENV['certificate'] %>
+
+# development:
+#   <<: *default
+#   database: cookieSurveyApp_deployment
+
+# test:
+#   <<: *default
+#   database: cookieSurveyApp_test
+
+# production:
+#   <<: *default
+#   database: cookieSurveyApp_production
+
+
+
+
+
+
+
+
+
+######
+######  setup for connection to local postgres database
+
+#//
+default: &default
   adapter: postgresql
   encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: <%= ENV['host'] %>
-  port: 32668
-  username: <%= ENV['username'] %>
-  url: <%= ENV['url'] %>
-  password: <%= ENV['password'] %>
-  certificate: <%= ENV['certificate'] %>
+#//
 
+#//
 development:
   <<: *default
-  database: cookieSurveyApp_deployment
+  database: cookieSurveyApp_development
+#//
 
 test:
   <<: *default
   database: cookieSurveyApp_test
+#//  
 
+#//
 production:
   <<: *default
   database: cookieSurveyApp_production
+  username: cookieSurveyApp
+  password: <%= ENV['COOKIESURVEYAPP_DATABASE_PASSWORD'] %>
+
+#//
+
